@@ -55,7 +55,7 @@ def shrani_statistiko():
 	winner = ""
 	if igra.xo.winning_move > 0:
 		winner = igra.igralec1
-	else:
+	elif  igra.xo.winning_move < 0 and  igra.xo.winning_move != -1000:
 		winner = igra.igralec2
 	if not os.path.isfile(file):
 		f = open(file, "w+")
@@ -89,7 +89,7 @@ def index():
 	winner = ""
 	if igra.xo.winning_move > 0:
 		winner = igra.igralec1
-	else:
+	elif  igra.xo.winning_move < 0 and  igra.xo.winning_move != -1000:
 		winner = igra.igralec2
 	return bottle.template('site.html', most_games_played = '', most_wins = '', most_frequent_winning_move = '', most_frequent_opening_move = '', polje_1 = polje_1, polje_2 = polje_2, polje_3 = polje_3, polje_4 = polje_4, polje_5 = polje_5, polje_6 = polje_6, polje_7 = polje_7, polje_8 = polje_8, polje_9 = polje_9, zmagovalec = winner, igralec_1 = igra.igralec1, igralec_2 = igra.igralec2 )
 
@@ -109,7 +109,7 @@ def izracunaj():
 	winner = ""
 	if igra.xo.winning_move > 0:
 		winner = igra.igralec1
-	else:
+	elif  igra.xo.winning_move < 0 and  igra.xo.winning_move != -1000:
 		winner = igra.igralec2
 	if not os.path.isfile(file):
 		return bottle.template('site.html', most_games_played = 'Igra še ni bila igrana', most_wins = '', most_frequent_winning_move = '', most_frequent_opening_move = '', polje_1 = polje_1, polje_2 = polje_2, polje_3 = polje_3, polje_4 = polje_4, polje_5 = polje_5, polje_6 = polje_6, polje_7 = polje_7, polje_8 = polje_8, polje_9 = polje_9, zmagovalec = winner, igralec_1 = igra.igralec1, igralec_2 = igra.igralec2 )
