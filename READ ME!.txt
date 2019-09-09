@@ -1,0 +1,4 @@
+1) Zaženi site.py
+2) V brskalniku odpri locahost:8080
+3) Vpiši imena igralcev, pritisni na gumb 'nastavi igralce' in igraj
+4) S klikom na gumb 'prikaži statistko' se prikaže stitistika preteklih iger

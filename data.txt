@@ -1,0 +1,4 @@
+win:kevin,kevin,joda,joda,joda,joda,joda,joda,joda,joda,joda,joda,joda,joda,joda,joda,kevin
+first_move:1,1,1
+winning_move:4,4,4
+player:kevin,kevin2,kevin,kevin2,kevin,kevin2

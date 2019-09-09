@@ -1,0 +1,80 @@
+%import model
+<!DOCTYPE html>
+<html>
+
+    <body bgcolor=#ADFF2F>
+        <h1  style="color:rgb(11, 44, 3);text-align:center;">Igra: Križci Krožci</h1>
+		<img style="float:right" src="https://gurmeet.net/Images/puzzles/fifteen_sum.gif" alt="grid">        
+
+      <form action='/igralci/' method="POST">
+            <input type="text" name ='Igralec1' placeholder={{igralec_1}}>
+            <input type="text" name ='Igralec2' placeholder={{igralec_2}}>
+            <input type="submit" value = "nastavi igralce">
+            </form>
+            <form action='/novaIgra/' method="POST">
+               <input type="submit" value = "nova Igra">
+            </form>
+            <table>
+            <tr><td><form action='/igraj/0/' method="POST">
+               <input type="submit" value ={{polje_1}}>
+            </form>
+         </td>
+         <td>
+            <form action='/igraj/1/' method="POST">
+                <input type="submit" value ={{polje_2}}>
+             </form>
+            </td>
+            <td>
+             <form action='/igraj/2/' method="POST">
+                <input type="submit" value ={{polje_3}}>
+             </form>
+            </td>
+            </tr>
+            <tr>
+               <td>
+             <form action='/igraj/3/' method="POST">
+                <input type="submit" value ={{polje_4}}>
+             </form>
+            </td>
+            <td>
+             <form action='/igraj/4/' method="POST">
+                <input type="submit" value ={{polje_5}}>
+             </form>
+            </td>
+            <td>
+             <form action='/igraj/5/' method="POST">
+                <input type="submit" value ={{polje_6}}>
+             </form>
+            </td>
+            </tr>
+            <tr>
+               <td>
+             <form action='/igraj/6/' method="POST">
+                <input type="submit" value ={{polje_7}}>
+             </form>
+            </td>
+            <td>
+             <form action='/igraj/7/' method="POST">
+                <input type="submit" value ={{polje_8}}>
+             </form>
+            </td>
+            <td>
+             <form action='/igraj/8/' method="POST">
+                <input type="submit" value ={{polje_9}}>
+             </form>
+            </td>
+            </tr>
+            </table>
+             <form action='/izracun/' method="POST">
+               <input type="submit" value="Prikaži statistiko">
+            </form>
+        <br>
+        <div> <b>Zmagovalec:</b> {{zmagovalec}} </div>
+        <div> <b>Najvec igranih iger:</b> {{most_games_played}} </div>
+		<div> <b>Najvec zmag ima igralec: </b> {{most_wins}} </div>
+		<div> <b>Najpogostejša zmagovalna poteza: </b> {{most_frequent_winning_move}} </div>
+        <div> <b> Najpogostejša prva poteza: </b> {{most_frequent_opening_move}} </div>
+ 
+      
+    </body>
+</html>
